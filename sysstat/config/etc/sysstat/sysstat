@@ -1,0 +1,15 @@
+# sysstat configuration file.
+
+# How long to keep log files (in days).
+# Used by sa2(8) script
+# If value is greater than 28, then log files are kept in
+# multiple directories, one for each month.
+HISTORY=31
+
+# Compress (using gzip or bzip2) sa and sar files older than (in days):
+COMPRESSAFTER=5
+
+# Parameters for the system activity data collector (see sadc manual page)
+# which are used for the generation of log files.
+SADC_OPTIONS=""
+

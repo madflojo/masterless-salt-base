@@ -1,0 +1,3 @@
+wget:
+  pkg:
+    - latest

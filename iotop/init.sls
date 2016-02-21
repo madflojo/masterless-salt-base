@@ -1,0 +1,3 @@
+iotop:
+  pkg:
+    - latest

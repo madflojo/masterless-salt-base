@@ -1,0 +1,3 @@
+screen:
+  pkg:
+    - latest

@@ -3,8 +3,8 @@ docker.io:
     - managed
     - humanname: Docker Repo
     - name: deb https://get.docker.com/ubuntu docker main
-    - keyserver: keyserver.ubuntu.com
-    - keyid: 36A1D7869245C8950F966E92D8576A8BA88D21E9
+    - keyserver: hkp://p80.pool.sks-keyservers.net:80
+    - keyid: 58118E89F3A912897C070ADBF76221572C52609D
   pkg:
     - latest
     - require:

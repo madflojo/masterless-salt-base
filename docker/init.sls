@@ -1,6 +1,6 @@
 apt-transport-https:
   pkg:
-    -latest
+    - latest
 
 ca-certificates:
   pkg:

@@ -1,0 +1,21 @@
+# Download Salt GPG Key
+RUN CMD apt-get update
+RUN CMD apt-get install -y wget
+RUN CMD wget -O - https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
+
+# Copy apt sources.list for Salt
+PUT salt/config/etc/apt/sources.list.d/saltstack.list /etc/apt/sources.list.d/saltstack.list 0644
+
+# Install Salt
+RUN CMD apt-get update
+RUN CMD apt-get install -y salt-minion
+
+# Install git and clone this repo
+RUN CMD apt-get install -y git
+RUN CMD git clone https://github.com/madflojo/salt-base.git /srv/salt/base
+
+# Place Masterless config on target
+PUT salt/config/etc/salt/minion.d/masterless.conf /etc/salt/minion.d/masterless.conf 0644
+
+# Run salt-call
+RUN CMD /usr/bin/salt-call state.highstate --local

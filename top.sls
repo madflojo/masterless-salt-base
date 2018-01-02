@@ -1,6 +1,6 @@
 base:
   '*':
-    - dockerio
+    - docker
     - fail2ban
     - git
     - groups
@@ -15,3 +15,5 @@ base:
     - sysstat
     - timezone
     - wget
+    - salt.minion
+    - salt.base

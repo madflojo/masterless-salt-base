@@ -12,10 +12,9 @@ software-properties-common:
 
 docker-repo:
   pkgrepo.managed:
-    - name: deb https://apt.dockerproject.org/repo {{ grains["os"]|lower }}-{{ grains["oscodename"] }} main
-    - humanname: {{ grains["os"] }} {{ grains["oscodename"]|capitalize }} Docker Package Repository
-    - keyid: 58118E89F3A912897C070ADBF76221572C52609D
-    - keyserver: hkp://p80.pool.sks-keyservers.net:80
+    - name: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ grains["os"]|lower }}-{{ grains["oscodename"] }} stable
+    - humanname: Docker Package Repository
+    - key_url: https://download.docker.com/linux/ubuntu/gpg
     - file: /etc/apt/sources.list.d/docker.list
     - refresh_db: True
 

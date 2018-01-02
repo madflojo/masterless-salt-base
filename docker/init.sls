@@ -1,4 +1,3 @@
-# Docker dependencies
 apt-transport-https:
   pkg:
     -latest
@@ -17,7 +16,7 @@ docker-repo:
     - humanname: {{ grains["os"] }} {{ grains["oscodename"]|capitalize }} Docker Package Repository
     - keyid: 58118E89F3A912897C070ADBF76221572C52609D
 
-docker-ce
+docker-ce:
   pkg:
     - latest
     - require:

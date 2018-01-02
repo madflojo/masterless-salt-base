@@ -12,7 +12,7 @@ software-properties-common:
 
 docker-repo:
   pkgrepo.managed:
-    - name: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ grains["os"]|lower }}-{{ grains["oscodename"] }} stable
+    - name: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ grains["oscodename"] }} stable
     - humanname: Docker Package Repository
     - key_url: https://download.docker.com/linux/ubuntu/gpg
     - file: /etc/apt/sources.list.d/docker.list

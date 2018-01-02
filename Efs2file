@@ -12,7 +12,7 @@ RUN CMD apt-get install -y salt-minion
 
 # Install git and clone this repo
 RUN CMD apt-get install -y git
-RUN CMD git clone https://github.com/madflojo/salt-base.git /srv/salt/base
+RUN CMD git clone https://github.com/madflojo/masterless-salt-base.git /srv/salt/base
 
 # Place Masterless config on target
 PUT salt/config/etc/salt/minion.d/masterless.conf /etc/salt/minion.d/masterless.conf 0644
